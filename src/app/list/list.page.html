@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Liste des recettes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let recette of recettes">
+      <ion-label>
+        <h2>{{ recette.title }}</h2>
+        <p>Catégorie : {{ recette.category }}</p>
+      </ion-label>
+
+      <ion-button color="primary" (click)="viewRecette(recette.id)">Voir</ion-button>
+
+      <ion-button color="tertiary" (click)="editRecette(recette.id)">Modifier</ion-button>
+
+      <ion-button color="danger" (click)="deleteRecette(recette.id)">Supprimer</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

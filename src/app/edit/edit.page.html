@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Modifier une recette</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="recetteForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="stacked">Titre</ion-label>
+      <ion-input formControlName="title"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Catégorie</ion-label>
+      <ion-input formControlName="category"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Ingrédients</ion-label>
+      <ion-textarea formControlName="ingredients"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Étapes</ion-label>
+      <ion-textarea formControlName="steps"></ion-textarea>
+    </ion-item>
+
+    <ion-button expand="full" type="submit">Modifier la recette</ion-button>
+  </form>
+</ion-content>
